@@ -12,10 +12,6 @@ const ListKelas = (  ) => {
 
   const kelas = useSelector(state => state.listClassReducers.class)
   
-  // console.log(kelas, 'asd')
-  //get data use an array instead of object to make it easier to use
-  
-
 
   useEffect(() => {
     dispatch(getListClass())
@@ -131,7 +127,6 @@ const columns = [
    
    ];
    const getDetailClass = (id, value, tableData) => {
-    console.log(id, value, tableData, 'jajaja')
     window.location.href = `/detail-class/${id}`
    }
   

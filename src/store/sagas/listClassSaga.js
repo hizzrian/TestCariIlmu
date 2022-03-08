@@ -6,7 +6,7 @@ function* getListClass() {
   try{
     const res = yield axios.get(`${api.getListClass}`)
     yield put({ type: "GET_LIST_CLASS_SUCCESS", payload: res.data })
-    console.log(res.data,'res')
+    
   }catch(e){
     console.log(e)
   }
