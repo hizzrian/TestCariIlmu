@@ -6,7 +6,7 @@ function* getListInstructure() {
   try{
     const res = yield axios.get(`${api.getListInstructure}`)
     yield put({ type: "GET_LIST_INSTRUCTURE_SUCCESS", payload: res.data })
-    // console.log(res.data,'res')
+    
   }catch(e){
     console.log(e)
   }

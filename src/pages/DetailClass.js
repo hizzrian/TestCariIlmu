@@ -8,18 +8,13 @@ import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import CustomizedHook from '../components/test';
-import IconButton from '@mui/material/IconButton';
-import AddBoxIcon from '@mui/icons-material/AddBox';
 import Autocomplete from '@mui/material/Autocomplete';
 import Card from '@mui/material/Card';
 const DetailClass = () => {
   const dispatch = useDispatch();
-  const [value, setValue] = useState('');
   const [code, setCode] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -31,13 +26,13 @@ const DetailClass = () => {
   const [cover, setCover] = useState('');
   const [instructors, setInstructors] = useState('');
   
-  // const [social_media, setSocialMedia] = useState('');
+  
   const params = useParams();
   const id = params.id;
   
   
   const data = useSelector(state => state.listClassReducers.detailClass.data)
-  console.log(data,'ea')
+  // console.log(data,'ea')
   
   const Input = styled('input')({
     display: 'none',
@@ -132,10 +127,7 @@ const DetailClass = () => {
       title: instructors,
     }
   ];
-  console.log(instructorList,'instructor')
-  // if (!data) {
-  //   return <Alert severity="error">This is an error — check it out!</Alert>;
-  // }
+ 
   return (
  
     <Paper>

@@ -3,14 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux"
 import MUIDataTable from "mui-datatables";
 import { getListInstructure } from '../store/actions/listInstructure.js';
-import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
 import PreviewIcon from '@mui/icons-material/Preview';
-import DetailInstructure from "./DetailInstructure.js";
-import {Link} from 'react-router-dom';
 const ListInstructure = () => {
   const dispatch = useDispatch();
 
@@ -75,16 +72,14 @@ const ListInstructure = () => {
         options: {
             filter: false,
             sort: false,
-            onRowsDelete: (oldData) => {
-                console.log(oldData)
-            },
+            
             customBodyRender: (value, tableMeta,tableData) => {
-                // console.log(value,tableMeta.rowData,'askdajs')
+                
                 return (
                     <div>
                         <Stack direction="row" spacing={2}>
                         <Button variant="contained" color="success" onClick={() => {
-                            console.log(value,tableMeta.rowData[1],'askdajs')
+                            
                             getDetailInstructure(value)
                             //Go to Edit instructure page with ID
 
@@ -106,14 +101,11 @@ const ListInstructure = () => {
    ];
 
     const getDetailInstructure = (value, tableMeta) => {
-        
-        console.log(value,tableMeta,'askdajs')
         //Go to Detail Class page with ID
         window.location.href = `/detail-instructure/${value}`
     }
  
     const deleteInstructure = (value, tableMeta) => {
-        console.log(value)
         //delete data from row
        
     }

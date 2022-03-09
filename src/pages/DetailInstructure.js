@@ -14,7 +14,6 @@ import 'react-quill/dist/quill.snow.css';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import Card from '@mui/material/Card';
 const DetailInstructure = () => {
   const dispatch = useDispatch();
   
