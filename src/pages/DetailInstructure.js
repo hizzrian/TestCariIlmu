@@ -24,7 +24,7 @@ const DetailInstructure = () => {
   const params = useParams();
   const id = params.id;
   
-  // console.log(id,'ea')
+  console.log(social_media,'ea')
   
   
   const data = useSelector(state => state.listInstructureReducer.detailInstructure.data)
