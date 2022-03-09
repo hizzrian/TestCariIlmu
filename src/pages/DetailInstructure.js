@@ -1,8 +1,8 @@
 //create hello world react component
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from 'react-router-dom';
-import {  getDetailInstructure, getListInstructure } from '../store/actions/listInstructure.js';
+import {  getDetailInstructure } from '../store/actions/listInstructure.js';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
@@ -33,7 +33,7 @@ const DetailInstructure = () => {
   
   useEffect(() => {
     dispatch(getDetailInstructure(id))
-  }, [dispatch])
+  }, [dispatch, id])
   
   
   useEffect(() => {

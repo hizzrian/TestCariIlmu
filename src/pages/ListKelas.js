@@ -1,5 +1,5 @@
 //create hello world react component
-import React, { useState, useEffect, state } from 'react';
+import React, {  useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux"
 import { getListClass } from '../store/actions/listClass';
 import Chip from '@mui/material/Chip';

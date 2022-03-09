@@ -1,8 +1,8 @@
 //create hello world react component
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from 'react-router-dom';
-import {  getDetailClass, getListClass } from '../store/actions/listClass.js';
+import {  getDetailClass } from '../store/actions/listClass.js';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
@@ -40,7 +40,7 @@ const DetailClass = () => {
   
   useEffect(() => {
     dispatch(getDetailClass(id))
-  }, [dispatch])
+  }, [dispatch, id])
   
   
   useEffect(() => {
